@@ -375,7 +375,7 @@ func (p *PodMapper) Process(metrics collector.MetricsByCounter, deviceInfo devic
 								metric.Attributes[draMigDeviceUUID] = migInfo.MIGDeviceUUID
 							}
 						}
-						maps.Copy(mstric.Labels, pi.Labels)
+						maps.Copy(metric.Labels, pi.Labels)
 						newmetrics = append(newmetrics, metric)
 					}
 				} else {
