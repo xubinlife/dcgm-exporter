@@ -393,7 +393,7 @@ func (p *PodMapper) Process(metrics collector.MetricsByCounter, deviceInfo devic
 					for k := range metric.Attributes {
 						delete(metric.Labels, k)
 					}
-
+					maps.Copy(metric.Labels, pi.Labels)
 					newmetrics = append(newmetrics, metric)
 				}
 				// Preserve the original device-level metric for GPUs not currently

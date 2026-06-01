@@ -58,7 +58,7 @@ func NewMetricsServer(
 			Addr:         c.Address,
 			Handler:      router,
 			ReadTimeout:  10 * time.Second,
-			WriteTimeout: 10 * time.Second,
+			WriteTimeout: 60 * time.Second,
 		},
 		webConfig: &web.FlagConfig{
 			WebListenAddresses: &[]string{c.Address},
